@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+ Display 
+ {% endblock %}
+{% block content %}
+<style>
+    table,tr,th,td{border:1px solid black;
+    border-collapse: collapse;
+    padding:6px;
+    text-align: center;}
+</style>
+<div class="maindisplay">
+    <div class="title" style="color:azure;"><h2><center>URL History</center></h2></div>
+    <form action="">
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Long url</th>
+                <th>Short url</th>
+            </thead>
+            <tbody>{% for url in values %}
+                <tr>
+                    <td> {{ url.id }} </th>
+                        <td> {{ url.long_url }} </td>
+                        <td> {{ url.short_url }} </td><br>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</div>
+{% endblock %}

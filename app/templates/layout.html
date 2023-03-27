@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}
+
+        {% endblock %}
+    </title>
+    <style>
+        
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="color" style="background-color:rgb(164, 212, 175);">
+    <div >
+        <div class="col-md-4" style="background-color:rgb(46, 63, 38);">
+            <br><br><br>
+            <nav>
+
+                <a href="{{ url_for('index') }}" class="btn btn-primary"> Home </a>
+                <a href="{{ url_for('display') }}" class="btn btn-danger">Display</a>
+
+            </nav>
+        </div>
+        <div class="col-md-6" style="background-color:rgb(86, 114, 86);"><br><br><br><br><br><br><br>    
+            {%block content%}{% endblock %}
+        </div>
+    </div>
+</body>
+
+
+</html>

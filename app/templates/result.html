@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block title %} Result {% endblock %} {% block content %}
+
+
+    <div class="container">
+        <div class="title" style="color:azure;"><b>URL Shortener</b></div><br><br>
+
+        <form action="" method="dialog">
+            <div class="">
+                <div class="input-box">
+                    <input type="text" id="result" value="{{ Srl }}">
+                    <button onclick="copy(id=result)">Copy</button>
+                    <script>
+                        const copy = async(text) => await navigator.clipboard.writeText(text.value);
+                    </script>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}
